@@ -13,6 +13,7 @@
 #include "task.h"
 #include "threads.h"
 #include "leds.h"
+#include "taskMainProjeto.h"
 
 extern int initGlobalThread(void);
 extern void stopGlobalThread(void);

@@ -18,10 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "leds.h"
-#include "taskMainProjeto.h"
-#include "FreeRTOS.h"
-#include "task.h"
+#include "globalThreads.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
