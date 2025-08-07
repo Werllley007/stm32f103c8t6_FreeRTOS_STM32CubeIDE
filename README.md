@@ -58,7 +58,7 @@ void taskBlink(void *argument) {
         }
     }
 }
-
+```
 
 ## Componentes e Funcionamento do Sistema
 
