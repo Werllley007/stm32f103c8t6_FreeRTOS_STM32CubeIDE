@@ -40,7 +40,24 @@ Após a compilação e o upload para o microcontrolador, o LED no pino PC13 deve
 Esta função é executada em uma tarefa do FreeRTOS e é responsável por alternar o estado de um LED no pino PC13.
 
 ```c
-void taskBlink(void *argument);
+void taskBlink(void *argument) {
+    int blinkCount = 0;
+    led_setup();  // Configura o LED
+
+    while (1) {
+        led_on(LED_PC13);  // Acende o LED
+        osDelay(500);  // Espera 500 ms
+
+        led_off(LED_PC13);  // Apaga o LED
+        osDelay(500);  // Espera 500 ms
+
+        blinkCount++;  // Incrementa o contador de piscadas
+
+        if (blinkCount >= 10) {  // Depois de 10 piscadas
+            vTaskDelete(NULL);  // Deleta a tarefa atual
+        }
+    }
+}
 
 
 ## Componentes e Funcionamento do Sistema
